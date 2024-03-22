@@ -9,6 +9,7 @@ dotenv.config();
 const app = express();
 
 app.use(morgan("dev"));
+app.use(express.json());
 app.use("/api", router);
 
 const PORT = process.env.PORT || 3899;
